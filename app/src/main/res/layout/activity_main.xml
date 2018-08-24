@@ -38,39 +38,95 @@
         app:layout_constraintTop_toBottomOf="@id/banner" />
 
     <ImageView
-        android:id="@+id/camerabutton"
+        android:id="@+id/camera-btn"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/favoritebutton"
-        app:layout_constraintEnd_toStartOf="@+id/favoritebutton"
+        app:layout_constraintBottom_toBottomOf="@+id/favorite-btn"
+        app:layout_constraintEnd_toStartOf="@+id/favorite-btn"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/favoritebutton"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="@+id/favorite-btn"
         app:srcCompat="@drawable/camerabutton" />
 
     <ImageView
-        android:id="@+id/favoritebutton"
+        android:id="@+id/favorite-btn"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/inboxbutton"
-        app:layout_constraintEnd_toStartOf="@+id/inboxbutton"
+        app:layout_constraintBottom_toBottomOf="@+id/inbox-btn"
+        app:layout_constraintEnd_toStartOf="@+id/inbox-btn"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/camerabutton"
-        app:layout_constraintTop_toTopOf="@+id/inboxbutton"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/camera-btn"
+        app:layout_constraintTop_toTopOf="@+id/inbox-btn"
         app:srcCompat="@drawable/favoritebutton" />
 
     <ImageView
-        android:id="@+id/inboxbutton"
+        android:id="@+id/inbox-btn"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/favoritebutton"
+        app:layout_constraintStart_toEndOf="@+id/favorite-btn"
         app:layout_constraintTop_toBottomOf="@+id/logo"
         app:srcCompat="@drawable/inboxbutton" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/data-img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/camera-btn"
+        app:srcCompat="@drawable/dataimage" />
+
+    <ImageView
+        android:id="@+id/gallery-img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@+id/data-img"
+        app:layout_constraintTop_toTopOf="@+id/data-img"
+        app:srcCompat="@drawable/imagesimage" />
+
+    <ImageView
+        android:id="@+id/video-img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/data-img"
+        app:layout_constraintStart_toStartOf="@+id/data-img"
+        app:layout_constraintTop_toBottomOf="@+id/data-img"
+        app:srcCompat="@drawable/videosimage" />
+
+    <ImageView
+        android:id="@+id/code-img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/video-img"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/gallery-img"
+        app:layout_constraintStart_toStartOf="@+id/gallery-img"
+        app:layout_constraintTop_toBottomOf="@+id/gallery-img"
+        app:srcCompat="@drawable/codeimage" />
+
 </android.support.constraint.ConstraintLayout>

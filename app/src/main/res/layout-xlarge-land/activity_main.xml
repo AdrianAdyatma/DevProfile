@@ -11,6 +11,7 @@
         android:layout_height="240dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/devslopesbanner" />
@@ -20,7 +21,7 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="192dp"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -49,18 +50,17 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/devslopes_text"
         app:layout_constraintTop_toTopOf="@+id/fav-btn"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/camerabutton" />
 
     <ImageView
         android:id="@+id/inbox-btn"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginEnd="64dp"
-        app:layout_constraintBottom_toBottomOf="@+id/devslopes_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/fav-btn"
+        app:layout_constraintTop_toTopOf="@+id/button"
         app:srcCompat="@drawable/inboxbutton" />
 
     <ImageView
@@ -74,8 +74,22 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/camera-btn"
         app:layout_constraintTop_toTopOf="@+id/inbox-btn"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/favoritebutton" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="240dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/fillet_gradient"
+        android:text="Customize Dashboard"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/devslopes_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inbox-btn" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
@@ -94,7 +108,7 @@
         android:layout_marginTop="32dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/video-img"
-        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintDimensionRatio="32:9"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,14 +124,13 @@
         android:layout_marginBottom="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/code-img"
-        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintDimensionRatio="32:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@+id/data-img"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintVertical_chainStyle="packed"
         app:srcCompat="@drawable/imagesimage" />
@@ -126,9 +139,10 @@
         android:id="@+id/video-img"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="32:9"
         app:layout_constraintEnd_toEndOf="@+id/data-img"
         app:layout_constraintStart_toStartOf="@+id/data-img"
         app:layout_constraintTop_toBottomOf="@+id/data-img"
@@ -138,26 +152,13 @@
         android:id="@+id/code-img"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/video-img"
-        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,32:9"
         app:layout_constraintEnd_toEndOf="@+id/gallery-img"
         app:layout_constraintStart_toStartOf="@+id/gallery-img"
         app:layout_constraintTop_toBottomOf="@+id/gallery-img"
         app:srcCompat="@drawable/codeimage" />
 
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="240dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/fillet_gradient"
-        android:text="Customize Dashboard"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/video-img" />
 </android.support.constraint.ConstraintLayout>

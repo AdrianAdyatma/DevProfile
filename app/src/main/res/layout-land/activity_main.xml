@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/devslopesbanner" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/devslopesprofilelogo" />
+
+    <TextView
+        android:id="@+id/devslopes_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/devslopes"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintStart_toEndOf="@+id/logo" />
+
+    <ImageView
+        android:id="@+id/camera-btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/devslopes_text"
+        app:layout_constraintEnd_toStartOf="@+id/favorite-btn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/devslopes_text"
+        app:srcCompat="@drawable/camerabutton" />
+
+    <ImageView
+        android:id="@+id/favorite-btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/camera-btn"
+        app:layout_constraintEnd_toStartOf="@+id/inbox-btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/camera-btn"
+        app:layout_constraintTop_toTopOf="@+id/camera-btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/favoritebutton" />
+
+    <ImageView
+        android:id="@+id/inbox-btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/favorite-btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/favorite-btn"
+        app:layout_constraintTop_toTopOf="@+id/favorite-btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/inboxbutton" />
+
+    <ImageView
+        android:id="@+id/data-img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/gallery-img"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dataimage" />
+
+    <ImageView
+        android:id="@+id/gallery-img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/data-img"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/video-img"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/data-img"
+        app:layout_constraintTop_toTopOf="@+id/data-img"
+        app:srcCompat="@drawable/imagesimage" />
+
+    <ImageView
+        android:id="@+id/video-img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/gallery-img"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/code-img"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/gallery-img"
+        app:layout_constraintTop_toTopOf="@+id/gallery-img"
+        app:srcCompat="@drawable/videosimage" />
+
+    <ImageView
+        android:id="@+id/code-img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/video-img"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/video-img"
+        app:layout_constraintTop_toTopOf="@+id/video-img"
+        app:srcCompat="@drawable/codeimage" />
+
+</android.support.constraint.ConstraintLayout>
